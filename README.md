@@ -1,29 +1,59 @@
-# Y. Nandish portfolio
+# Nandish — Personal Portfolio
 
-A static Next.js portfolio designed for Cloudflare Pages.
+Modern, high-performance personal portfolio landing page for **Y Nandish**, Web Developer at **Monolith Agency** ([getmonolith.in](https://getmonolith.in)).
 
-## Local development
+## Tech Stack
+- **Framework**: React 18 + TypeScript + Vite
+- **Styling**: Tailwind CSS 3 with fluid typography (`clamp()`) and custom dark theme (`#0C0C0C`)
+- **Animations**: Framer Motion 12
+- **Icons**: Lucide React
+- **Typography**: Google Fonts Kanit (300-900)
+
+## Features & Sections
+1. **Hero Section**: Massive fluid heading (`"Hi, i'm nandish"`), physics-based magnetic 3D portrait, and responsive navbar.
+2. **Dual-Row Marquee**: 21 scroll-driven motion preview cards showcasing production projects from Monolith and Glocal Research Hub.
+3. **About Me**: Character-by-character scroll reveal text with floating iridescent 3D decorations and role bullet chips.
+4. **My Daily Stack**: Interactive showcase of daily engineering tools (Next.js, Three.js, Python, Cursor, Claude Code, Google Antigravity, Figma, Node.js, Tailwind CSS).
+5. **Services**: High-contrast white section highlighting web development, agentic AI, and UI engineering capabilities.
+6. **Sticky Stacking Projects**:
+   - `01` **Monolith** (Agency Platform & Autonomous Commerce)
+   - `02` **Personal Portfolio** (Interactive 3D Web & AI Showcase)
+   - `03` **Glocal Research Hub** (Client Strategic Advisory & Global Intelligence)
+7. **Contact**: Quick-connect buttons, direct email, phone, and social links.
+
+## Local Development
 
 ```bash
-pnpm install
-pnpm dev
+# Install dependencies
+npm install
+
+# Start local dev server
+npm run dev
+
+# Build for production
+npm run build
 ```
 
-## Production verification
+---
 
-```bash
-pnpm build
-```
+## Deploying to Cloudflare Pages
 
-The static website is generated in `out/`.
+### Step 1: Connect Repository
+1. Log in to the [Cloudflare Dashboard](https://dash.cloudflare.com/).
+2. Navigate to **Compute (Workers) > Workers & Pages** and click **Create application > Pages**.
+3. Select **Connect to Git** and choose the `nandish87/nandish-portfolio` repository.
 
-## Deploy with Cloudflare Pages
+### Step 2: Build Configuration
+Configure the build settings as follows:
 
-Use **Next.js (Static HTML Export)** as the framework preset:
+| Field | Value |
+|---|---|
+| **Framework preset** | `Vite` |
+| **Build command** | `npm run build` |
+| **Build output directory** | `dist` |
+| **Root directory** | `/` (leave empty) |
 
-- Production branch: `main`
-- Build command: `npx next build`
-- Build output directory: `out`
-- Node.js version: `22`
+### Step 3: Environment Variables (Optional)
+- `NODE_VERSION`: `20` (also specified in `.nvmrc`)
 
-See the deployment instructions in the project handoff for the complete GitHub and Cloudflare Pages flow.
+Click **Save and Deploy**. Cloudflare Pages will build the site in seconds and provide a global CDN URL!

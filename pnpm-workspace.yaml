@@ -1,4 +1,0 @@
-allowBuilds:
-  # Required by Next.js's resolver. Explicitly allow this one build script;
-  # all other dependency scripts remain subject to pnpm's default policy.
-  unrs-resolver: true
