@@ -57,3 +57,4 @@ Configure the build settings as follows:
 - `NODE_VERSION`: `20` (also specified in `.nvmrc`)
 
 Click **Save and Deploy**. Cloudflare Pages will build the site in seconds and provide a global CDN URL!
+
