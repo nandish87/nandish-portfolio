@@ -33,7 +33,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, totalCards })
           top: `${index * 28}px`,
           position: 'relative',
         }}
-        className="w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:p-6 md:p-8 origin-top shadow-[0_20px_50px_rgba(0,0,0,0.9)]"
+        className="w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:p-6 md:p-8 origin-top shadow-[0_20px_50px_rgba(0,0,0,0.9)] group cursor-pointer"
+        onClick={() => window.open(project.link, '_blank', 'noopener,noreferrer')}
+        role="link"
+        aria-label={`Open ${project.name} (opens in a new tab)`}
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            window.open(project.link, '_blank', 'noopener,noreferrer');
+          }
+        }}
       >
         {/* Top Header Row */}
         <div className="flex flex-wrap items-center justify-between gap-4 mb-4 sm:mb-6 md:mb-8 pb-3 sm:pb-4 border-b border-[#D7E2EA]/15">
@@ -54,7 +64,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, totalCards })
             </div>
           </div>
 
-          <LiveProjectButton href={project.link} />
+          <LiveProjectButton
+            href={project.link}
+            onClick={(e) => e.stopPropagation()}
+          />
         </div>
 
         {/* Bottom Two-Column Image Grid (40% / 60%) */}
@@ -69,7 +82,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, totalCards })
                 src={project.images[0]}
                 alt={`${project.name} preview top`}
                 loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
               />
             </div>
             <div
@@ -80,7 +93,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, totalCards })
                 src={project.images[1]}
                 alt={`${project.name} preview detail`}
                 loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
               />
             </div>
           </div>
@@ -94,7 +107,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, totalCards })
               src={project.images[2]}
               alt={`${project.name} preview full`}
               loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
             />
           </div>
         </div>

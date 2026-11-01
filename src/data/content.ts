@@ -244,7 +244,7 @@ export const PROJECTS: ProjectItem[] = [
     number: '02',
     name: 'Personal Portfolio',
     category: 'Personal',
-    link: 'https://github.com/nandish87',
+    link: 'https://nandish-8rj.pages.dev',
     images: [
       '/assets/projects/p2-1.jpg', // In progress / coming soon placeholder
       '/assets/projects/p2-2.jpg',
@@ -256,7 +256,7 @@ export const PROJECTS: ProjectItem[] = [
     number: '03',
     name: 'Glocal Research Hub',
     category: 'Client',
-    link: 'https://glocalresearchub.com',
+    link: 'https://grh-website.pages.dev',
     images: [
       '/assets/projects/p3-1.jpg', // GRH Skyline section
       '/assets/projects/p3-2.jpg', // GRH Inquiries & Knowledge section
