@@ -263,6 +263,18 @@ export const PROJECTS: ProjectItem[] = [
       '/assets/projects/p3-3.jpg', // GRH Golden Compass & Ambition banner
     ],
   },
+  {
+    id: 'project-4',
+    number: '04',
+    name: 'Y. Jayaram Silks',
+    category: 'Client',
+    link: 'https://jayaram-silks.pages.dev/',
+    images: [
+      '/assets/projects/p4-1.jpg', // Heritage & Loom Craftsmanship
+      '/assets/projects/p4-2.jpg', // Masterpiece Collections
+      '/assets/projects/p4-3.jpg', // Hero Bridal Silk Showcase
+    ],
+  },
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
