@@ -165,11 +165,14 @@ export const IMAGES = {
     group: '/assets/about/group.png',
   },
 
-  // Marquee section local preview images (21 total local gifs)
+  // Marquee section local preview images (Monolith, Jayaram Silks, GRH, Portfolio)
   marqueeRow1: [
     '/assets/marquee/01.gif',
+    '/assets/marquee/22.gif', // Jayaram Silks Hero & Bridal Drape
     '/assets/marquee/02.gif',
+    '/assets/marquee/23.gif', // Jayaram Silks Masterpiece Saree Collection
     '/assets/marquee/03.gif',
+    '/assets/marquee/24.gif', // Jayaram Silks Generations of Master Weaving
     '/assets/marquee/04.gif',
     '/assets/marquee/05.gif',
     '/assets/marquee/06.gif',
@@ -182,8 +185,11 @@ export const IMAGES = {
   marqueeRow2: [
     '/assets/marquee/12.gif',
     '/assets/marquee/13.gif',
+    '/assets/marquee/25.gif', // Jayaram Silks Mulberry Cocoon to Royal Drape
     '/assets/marquee/14.gif',
+    '/assets/marquee/26.gif', // Jayaram Silks Loom Photography & Fabric Showcase
     '/assets/marquee/15.gif',
+    '/assets/marquee/27.gif', // Jayaram Silks Wholesale Supply & Bulk Ordering
     '/assets/marquee/16.gif',
     '/assets/marquee/17.gif',
     '/assets/marquee/18.gif',
